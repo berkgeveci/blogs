@@ -37,6 +37,7 @@ These posts were originally published on
 | 2015-02-20 | [Cell set as unstructured grid](cell-set/cell-set.md) | Implicit connectivity |
 | 2015-03-07 | [Threshold with cell set](threshold/threshold.md) | Efficient threshold filter |
 | 2025-02-24 | [VTK: The polyglot toolkit](vtk-the-polyglot/vtk-the-polyglot.md) | VTK across 10 programming languages |
+| 2026-02-25 | [VTK + Tcl/Tk: The Return](vtk-tcl-tk/vtk-tcl-tk.md) | Reviving VTK's Tcl/Tk bindings via Python interop |
 
 ## Structure
 
