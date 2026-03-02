@@ -38,6 +38,7 @@ These posts were originally published on
 | 2015-03-07 | [Threshold with cell set](threshold/threshold.md) | Efficient threshold filter |
 | 2025-02-24 | [VTK: The polyglot toolkit](vtk-the-polyglot/vtk-the-polyglot.md) | VTK across 10 programming languages |
 | 2026-02-25 | [VTK + Tcl/Tk: The Return](vtk-tcl-tk/vtk-tcl-tk.md) | Reviving VTK's Tcl/Tk bindings via Python interop |
+| 2026-03-02 | [Basic Trame + VTK in Jupyter](basic-trame/basic-trame.md) | Interactive VTK exploration with trame in Jupyter |
 
 ## Structure
 
