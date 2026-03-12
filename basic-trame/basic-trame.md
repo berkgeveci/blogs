@@ -27,29 +27,25 @@ class Viewer(TrameApp):
         self._interactor.SetRenderWindow(self._renwin)
         self._interactor.GetInteractorStyle().SetCurrentStyleToTrackballCamera()
 
-        self.ui = self._generate_ui()
+        self._build_ui()
 
     def add_actor(self, actor):
         self._renderer.AddActor(actor)
         self.view.reset_camera()
 
-    def _generate_ui(self):
-        with SinglePageLayout(self.server) as layout:
-            layout.title.set_text("Trame demo")
-
-            with layout.content:
-                with v3.VContainer(fluid=True, classes="pa-0 fill-height"):
-                    self.view = vtk_widgets.VtkRemoteView(
-                        self._renwin,
-                        interactive_ratio=1,
-                        interactive_quality=100)
-
-            return layout
+    def _build_ui(self):
+        with VAppLayout(self.server) as self.ui:
+            self.view = vtk_widgets.VtkRemoteView(
+                self._renwin,
+                interactive_ratio=1,
+                interactive_quality=100,
+            )
 ```
 And in Jupyter, here is what I do (let's call the module `vtk_view`).
 
 ```python
 import vtk_view
+from trame.app.jupyter_css import fullscreen
 
 from vtkmodules import vtkRenderingCore as rendering_core
 from vtkmodules import vtkFiltersSources as sources
@@ -61,10 +57,9 @@ actor = rendering_core.vtkActor()
 actor.SetMapper(mapper)
 
 app=vtk_view.Viewer()
-app
 
-# We got an empty window. Let's pop something in it.
 app.add_actor(actor)
+fullscreen(app)
 
 cone.resolution = 32
 app.view.update()
