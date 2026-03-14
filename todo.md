@@ -1,7 +1,8 @@
 My tasks:
 
 - [x] VTK/Tcl
-- [ ] New pipeline syntax in Python
+- [x] New pipeline syntax in Python
+- [ ] Pythonic VTK vision
 - [ ] New arrays in Python
 - [ ] Julia with VTK
 - [x] VTK with trame
